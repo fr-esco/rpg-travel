@@ -3,11 +3,17 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  '@angular2-material': 'vendor/@angular2-material'
+  '@angular2-material': 'vendor/@angular2-material',
+  'js-quantities': 'vendor/js-quantities'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'vendor/js-quantities': {
+    format: 'global',
+    exports: 'Qty',
+    main: 'src/quantities.js'
+  }
 };
 
 /** Material packages configuration. */
@@ -49,8 +55,7 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
-  'app/+speed',
-  'app/shared/main-layout',
+  'app/+speed'
   /** @cli-barrel */
 ];
 
