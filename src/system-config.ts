@@ -3,11 +3,31 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  '@angular2-material': 'vendor/@angular2-material'
 };
 
 /** User packages configuration. */
 const packages: any = {
 };
+
+/** Material packages configuration. */
+const materialPkgs: string[] = [
+  'button',
+  'card',
+  'checkbox',
+  'core',
+  'grid-list',
+  'icon',
+  'input',
+  'list',
+  'radio',
+  'sidenav',
+  'toolbar'
+];
+
+materialPkgs.forEach((pkg) => {
+  packages[`@angular2-material/${pkg}`] = { main: `${pkg}.js` };
+});
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
@@ -30,6 +50,7 @@ const barrels: string[] = [
   'app',
   'app/shared',
   'app/+speed',
+  'app/shared/main-layout',
   /** @cli-barrel */
 ];
 
