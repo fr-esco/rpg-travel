@@ -21,4 +21,7 @@ export class SpeedComponent implements OnInit {
   ngOnInit() {
   }
 
+  speed($event) {
+    console.info('event', $event);
+  }
 }
