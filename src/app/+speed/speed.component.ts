@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
-import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
-
+import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import 'js-quantities';
-declare const Qty: QtyModule.QtyStatic;
+
+import { SpeedInputComponent } from './speed-input/speed-input.component';
 
 @Component({
   moduleId: module.id,
@@ -11,7 +10,8 @@ declare const Qty: QtyModule.QtyStatic;
   templateUrl: 'speed.component.html',
   styleUrls: ['speed.component.css'],
   directives: [
-    MD_CARD_DIRECTIVES
+    MD_CARD_DIRECTIVES,
+    SpeedInputComponent
   ]
 })
 export class SpeedComponent implements OnInit {
@@ -19,7 +19,6 @@ export class SpeedComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(Qty('1 km').to('m'));
   }
 
 }

@@ -1,0 +1,21 @@
+@import '../../../assets/main.scss';
+
+:host {
+  form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    @include gutter-padding(tb);
+
+    md-input, md-radio-group {
+      flex: 0 1 48%;
+    }
+    md-radio-group {
+      @include gutter-padding(tb);
+    }
+    md-radio-button {
+      @include gutter-padding(lr);
+    }
+  }
+}

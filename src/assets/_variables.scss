@@ -1,0 +1,32 @@
+// Layout (from angular-material.scss)
+
+$baseline-grid:            8px !default;
+$layout-gutter-width:      ($baseline-grid * 2) !default;
+
+$layout-breakpoint-xs:     600px !default;
+$layout-breakpoint-sm:     960px !default;
+$layout-breakpoint-md:     1280px !default;
+$layout-breakpoint-lg:     1920px !default;
+
+@mixin gutter-padding($direction) {
+
+  @if $direction == tb {
+    // top-bottom
+    padding: ($layout-gutter-width / 2) 0;
+    @media screen and (min-width: $layout-breakpoint-sm) {
+      padding: $layout-gutter-width 0;
+    }
+  } @else if $direction == lr {
+    // left-right
+    padding: 0 $layout-gutter-width / 2;
+    @media screen and (min-width: $layout-breakpoint-sm) {
+      padding: 0 $layout-gutter-width;
+    }
+  } @else {
+    padding: $layout-gutter-width / 2;
+    @media screen and (min-width: $layout-breakpoint-sm) {
+      padding: $layout-gutter-width;
+    }
+  }
+
+}
