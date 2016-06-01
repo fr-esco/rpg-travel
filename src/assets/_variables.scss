@@ -8,24 +8,24 @@ $layout-breakpoint-sm:     960px !default;
 $layout-breakpoint-md:     1280px !default;
 $layout-breakpoint-lg:     1920px !default;
 
-@mixin gutter-padding($direction) {
+@mixin gutter-padding($direction: all, $gutter-width: $layout-gutter-width) {
 
   @if $direction == tb {
     // top-bottom
-    padding: ($layout-gutter-width / 2) 0;
+    padding: ($gutter-width / 2) 0;
     @media screen and (min-width: $layout-breakpoint-sm) {
-      padding: $layout-gutter-width 0;
+      padding: $gutter-width 0;
     }
   } @else if $direction == lr {
     // left-right
-    padding: 0 $layout-gutter-width / 2;
+    padding: 0 $gutter-width / 2;
     @media screen and (min-width: $layout-breakpoint-sm) {
-      padding: 0 $layout-gutter-width;
+      padding: 0 $gutter-width;
     }
   } @else {
-    padding: $layout-gutter-width / 2;
+    padding: $gutter-width / 2;
     @media screen and (min-width: $layout-breakpoint-sm) {
-      padding: $layout-gutter-width;
+      padding: $gutter-width;
     }
   }
 

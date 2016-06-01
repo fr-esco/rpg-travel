@@ -6,13 +6,13 @@
     flex-flow: row nowrap;
     justify-content: space-between;
 
-    @include gutter-padding(tb);
+    @include gutter-padding();
 
     md-input, md-radio-group {
       flex: 0 1 48%;
     }
     md-radio-group {
-      @include gutter-padding(tb);
+      padding-top: $layout-gutter-width * 0.75;
     }
     md-radio-button {
       @include gutter-padding(lr);
