@@ -2,8 +2,8 @@
   <md-toolbar color="primary">speed-input</md-toolbar>
   <md-card-content>
     <form>
-      <md-input [ngModel]="speed.scalar" (ngModelChange)="speedScalar($event)" type="number" min="0" max="1000" step="0.5" placeholder="Speed Value"></md-input>
-      <md-radio-group [ngModel]="speed.unit" (ngModelChange)="speedUnit($event)">
+      <md-input [ngFormControl]="scalar" [ngModel]="speed.scalar" type="number" min="0" max="1000" step="0.5" placeholder="Speed Value"></md-input>
+      <md-radio-group [ngFormControl]="unit" [ngModel]="speed.unit">
         <md-radio-button *ngFor="let uom of speedUnits" [value]="uom">
           {{uom}}
         </md-radio-button>
