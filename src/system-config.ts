@@ -57,6 +57,7 @@ const barrels: string[] = [
   'app/shared',
   'app/+speed',
   'app/+speed/speed-input',
+  'app/+speed/speed-output',
   /** @cli-barrel */
 ];
 
